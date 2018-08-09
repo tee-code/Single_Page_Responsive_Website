@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teecodehub.com</title>
+	<meta name = "viewport" content="width=device-width initial-scale=1.0" charset="utf-8">
+	<meta name = "description" content="Web development training center">
+	<meta name = "keywords" content="learn html,css,web,front-end, back-end,full-stack,frameworks,code,javascript,django,flask,ruby,php,sql,nodejs,bootstrap,w3.css,foundation,materializecss,rails,reactjs,angularjs,vuejs,laravel.">
+	<meta name="author" content="Odekunle Oluwatobi Alao">
+	<link rel="icon" type="image" href=".\images\favicon.ico">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body id="head" data-spy="scroll" data-target=".navigation" data-offset="60">
+	<div class = "wrapper">
+		<!-- top fixed navigation bar -->
+		<header class = "header" id = "head">
+			<nav class = "navigation">
+				<ul>
+					<li class = "logo"><a id = "logo" href="#head"><h3 style="display: inline;">teecodeHub</h3><span style="font-style:italic;">.com</span></a></li>
+					<a id = "drop" onclick = "display_hide();" href = "">☰</a>
+					<div class = "nav" id = "d">
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#modules">Modules</a></li>
+						<li><a href="#tutors">Our Tutors</a></li>
+						<li><a href="#pricing">Pricing</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+						<li id = "dropdown"><a href="">More</a>
+							<div id = "dropdown_content">
+								<a href="#projects">Projects</a>
+								<a href="#students">Students</a>
+								<a href="#reviews">Reviews</a>
+							</div>
+						</li>
+					</div>
+				</ul>
+			</nav>
+		</header>
+		<!-- Automatic carousel -->
+		<div class = "slider_container">
+			<div class = "slider_image display">
+				<img src=".\images\wehavecode.png" alt="wehavecode">
+			</div>
+			<div class = "slider_image">
+				<img src=".\images\teamproject.png" alt = "teamproject">
+			</div>
+			<div class = "slider_image">
+				<img src=".\images\developer.png" alt="empowering">
+			</div>
+		</div>
+		<div class = "slider_btn_container">
+			<button class = "slider_btn" id = "previous" style="float: left" onclick=""><<</button>
+			<button class = "slider_btn" id = "next" style="float: right" onclick="">>></button>
+		</div>
+		<div class = "circle_container">
+			<button class = "circle current_dot circle_animation" onclick="click_dot(0);">
+			</button>
+			<button class = "circle circle_animation" onclick="click_dot(1);"></button>
+			<button class = "circle circle_animation" onclick="click_dot(2);"></button>
+		</div>
+		<!-- About us section -->
+		
+		<section class = "about_container" id = "about">
+			<span class = "about button">About Us</span>
+			<div class = "col-11 about_content">
+				 <h2>What is teecodeHub?</h2>
+				 <p>
+				 	TeecodeHub is one of the largest and best web development site on the internet. You are curious of learning web development? You do not know where to start from? teecodeHub is here to help you start with the most popular and used technologies together with the concepts and ideas on how to be a front-end web developer or back-end web developer if not both(full-stack web developer).<br>
+				 	TeecodeHub was original created in 2014 by Odekunle Oluwatobi Alao, a Nigerian Software Developer with several years of exprience.
+				 </p>
+				 <br>
+				 <h2>How do we do it here?</h2>
+				 <p>
+				 	Web development is one of the fast rising skill because of the numerous free resources. Learning from other resources out there is good but learning and enroll at teecodeHub is the best.
+				 	We work you through tutorials from the best university in the world with projects on each modue. 
+				 	You would have access to course materials from various leading company and universities e.g. MIT,Havard,W3Schools,Facebook just to mention few.
+				 	Speaking the language we understand, we do not tolerate any copy and paste here if you are given an assignment to solve. You do not understand a module? Ask us, our team is there for you.
+				 </p>
+			</div>
+		</section>
+		<section class = "modules_container" id = "modules">
+			<span class = "button modules">Modules</span>
+			<div class = "col-11 modules_content">
+				<div class = "module_container">
+					<button class="module">HTML</button>
+					<button class="module">5</button>
+					<p>HyperText Markup Language</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">CSS</button>
+					<button class="module">3</button>
+					<p>Cascading Style Sheet</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">W3</button>
+					<button class="module">CSS</button>
+					<p>a front-end css frameworks </p>
+				</div>
+				<div class = "module_container">
+					<button class="module">BOOTSTRAP</button>
+					<button class="module">4</button>
+					<p>most popular front-end</p>
+					<p>frameworks</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">JAVA</button>
+					<button class="module">SCRIPT</button>
+					<p>a client-side & </p>
+					<p>scripting language</p>
+					<p> of the web</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">PYTHON</button>
+					<button class="module">3</button>
+					<p>a programming and </p>
+					<p>scripting language</p>
+				</div>
+				<div class = "module_container ruby">
+					<button class="module">RUBY</button>
+					<button class="module">3</button>
+					<p>a programming and </p>
+					<p>scripting language</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">PHP</button>
+					<button class="module">7</button>
+					<p>a server and scripting,<p>
+					<p>language of the web</p>
+				</div>
+				<div class = "module_container" style="clear: both;">
+					<button class="module">Front-end</button>
+					<button class="module">Frameworks</button>
+					<p>e.g ReactJS,AngularJs,</p>
+					<p>VueJs...</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">Back-end</button>
+					<button class="module">Frameworks</button>
+					<p>e.g Rails,Laravel,</p>
+					<p>Django,ExpressJs...</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">Virtual</button>
+					<button class="module">Control</button>
+					<p>Git and GitHub</p>
+				</div>
+				<div class = "module_container">
+					<button class="module">Algorithm</button>
+					<button class="module">Skills</button>
+					<p>learn to solve a problem</p>
+				</div>
+			</div>
+		</section>
+		<!-- Section for our tutors -->
+		<section class="tutors_container" id = "tutors">
+			<span class="button tutors">Our Tutors</span>
+			<div class = " col-11 tutors_content">
+				<div class="tutor_container">
+					<img src=".\images\tutor5.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Oluwatobi Alao</p>
+					<p>Web designer</p>
+					<p>HTML & CSS</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+				<div class="tutor_container">
+					<img src=".\images\tutor6.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Oluwatobi Emmanuel</p>
+					<p>Web designer</p>
+					<p>Bootstrap & w3.css</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+				<div class="tutor_container">
+					<img src=".\images\tutor5.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Oluwatobi Omotolani</p>
+					<p>Web developer</p>
+					<p>Javascript,React & Angular</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+				<div class="tutor_container">
+					<img src=".\images\tutor1.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Omotolani Enitan</p>
+					<p>Software Engineer</p>
+					<p>Data Structures & Algorithms</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+				<div class="tutor_container">
+					<img src=".\images\tutor5.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Omotolani Ojo</p>
+					<p>Web developer</p>
+					<p>Ruby & Rails</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+				<div class="tutor_container">
+					<img src=".\images\tutor6.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Oluwatobiloba E.</p>
+					<p>Web developer</p>
+					<p>Python & Django</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+				<div class="tutor_container">
+					<img src=".\images\tutor1.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Oluwatobiloba A</p>
+					<p>Web developer</p>
+					<p>PHP & Laravel</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+				<div class="tutor_container">
+					<img src=".\images\tutor5.jpg" alt="teecode" class="tutor_img">
+					<p>Odekunle Oluwatobi Ibrahim</p>
+					<p>Web developer</p>
+					<p>Git & GitHub</p>
+					<p>
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+						<img src=".\images\pic_html5.gif" style="width: 20px; height: 20px;">
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- Pricing section -->
+		<section id = "pricing" class="pricing_container">
+			<span class="button pricing">Pricing</span>
+			<div class="col-11 pricing_content">
+				<div class="price_container">
+					<div class="module_name">
+						Front-End Development
+					</div>
+					<div class="module_package">
+						HTML5, CSS3, JS, JQUERY, GIT & GITHUB.
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$50</h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Front-End Development
+					</div>
+					<div class="module_package">
+						BOOTSTRAP & W3.CSS
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$20</h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Front-End Development
+					</div>
+					<div class="module_package">
+						(ReactJS || AngularJS || vueJs) || all
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$50 each</h1>
+						<p>per month</p> 
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Database
+					</div>
+					<div class="module_package">
+						(SQL || MongoDB) || both
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$20 each</h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Back-End Development
+					</div>
+					<div class="module_package">
+						PYTHON & DJANGO
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$100</h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Back-End Development
+					</div>
+					<div class="module_package">
+						RUBY & RAILS
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$100 </h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Back-End Development
+					</div>
+					<div class="module_package">
+						PHP & LARAVEL
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$100</h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Back-End Development
+					</div>
+					<div class="module_package">
+						NODEjs & Expressjs
+						<br>
+						Beginner to Pro.
+					</div>
+					<div class="price">
+						<h1>$100</h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+				<div class="price_container">
+					<div class="module_name">
+						Algorithm
+					</div>
+					<div class="module_package">
+						
+						<br>
+						Build an efficient software
+					</div>
+					<div class="price">
+						<h1>$100</h1>
+						<p>per month</p>
+						<button class="button">Enrol</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- contact us section -->
+		<section class="contact_container" id = "contact">
+
+			<div class = "col-11 contact_us">
+				<div class="address">
+					<p>
+						<pre>
+Contact us and we'll get back to you within 24 hours.
+
+Ibadan, Nigeria.
+08096733464
+ooluwatobialao@gmail.com
+ibadan@teecodehub.com
+
+Lagos, Nigeria.
+08096733464
+ooluwatobialao@gmail.com
+lagos@teecodehub.com
+
+						</pre>
+					</p>
+				</div>
+				<div class="contact">
+					<h3>Contact</h3>
+					<form>
+
+						<input type = "text" placeholder="Name">
+						<input type = "email" placeholder="Email">
+						<textarea placeholder="comment"></textarea>
+						<button>Send</button>
+					</form>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- projects section -->
+		<section class = "projects_container" id = "projects">
+			<div class="col-11 projects_content">
+				<h1>NOT AVAILABLE</h1>
+			</div>
+		</section>
+		<!-- students section -->
+		<section class = "students_container" id = "students">
+			<div class="col-11 students_content">
+				<h1>NOT AVAILABLE</h1>
+			</div>
+		</section>
+		<!-- reviews section -->
+		<section class = "reviews_container" id = "reviews">
+			<div class="col-11 reviews_content">
+				<h1>NOT AVAILABLE</h1>
+			</div>
+		</section>
+
+		<!-- footer section -->
+		<footer class="footer" id = "footer">
+			<div class = "footer_content col-11">
+				teecodeHub, Copyright © 2018
+			</div> 
+		</footer>
+		
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

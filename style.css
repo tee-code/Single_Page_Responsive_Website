@@ -1,0 +1,734 @@
+/*Responsiveness */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	font-style: oblique;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+}
+/* css code for the top fixed navigation */
+.header{
+	background-color: #005555;
+	position: fixed;
+	top: 0;
+	opacity: 0.7;
+	box-sizing: border-box;
+	height: auto;
+	width: 100%;
+	display: inline-block;
+}
+.logo{
+	float: left;
+}
+.nav{
+	float: left;
+	margin-top: 10px;
+	display: none;
+	text-align: center;
+}
+.nav li{
+	float: none;
+}
+.navigation ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.navigation li a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 14px 10px;
+    font-family: raleway;
+    color: #f1f1f1;
+}
+.navigation li a:hover:not(#logo){
+	
+	border-bottom: 2px dotted #f1f1f1;
+	border-radius: 100%;
+}
+
+#logo span{
+	animation-name: logo;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+#logo h3{
+	animation-name: logoname;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+@keyframes logoname{
+	0%{
+		opacity: 0.3;
+	}
+	25%{
+		opacity: 0.5;
+	}
+	50%{
+		opacity: 0.8;
+	}
+	90%{
+		opacity: 1;
+		border-bottom: 2px ridge #f1f1f1;
+	}
+	100%{
+		border-top: 2px ridge #f1f1f1;
+		border-top-left-radius: 50%;
+		border-top-right-radius: 50%;  
+	}
+}
+@keyframes logo{
+	0%{
+		position: absolute;
+		left: 400px;
+	}
+	25%{
+		left:60px;
+	}
+	50%{
+		left: 180px;
+	}
+	100%{
+		color: white;
+		border-radius:50%;
+		border-bottom: 2px ridge #f1f1f1;
+	}
+}
+
+#dropdown_content{
+	display: none;
+	position: relative;
+	background-color: #005555;
+	color: #f1f1f1;
+	padding: 10px;
+	box-shadow: 0px 12px 16px 0 rgba(0,0,0,0.24),0px 17px 50px 0 rgba(0,0,0,0.19);
+	right:0px;
+	text-align: center;
+	z-index: 3;
+}
+#dropdown_content a{
+	display: block;
+	
+}
+#dropdown:hover #dropdown_content{
+	display: block;
+}
+#drop{
+	display: block;
+	cursor: pointer;
+	color: white;
+	right: 0px;
+	position: absolute;
+	text-decoration: none;
+}
+.header:after{
+	content: "";
+	clear: both;
+}
+
+/* css code for the carousel */
+.slider_container{
+	box-sizing: border-box;
+	padding: 0;
+	z-index: -1;
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin-top: 52px;
+}
+.slider_image{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	-o-transition: opacity 2s;
+	transition: opacity 2s;
+	z-index: 1;
+	margin-top: 0px;
+}
+.display{
+	opacity: 1;
+}
+.slider_image img{
+	width: 100%;
+	height: auto;
+}
+.slider_btn_container{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	margin-top: 25%;
+	padding: 10px;
+	z-index: 1;
+}
+.slider_btn{
+	background-color: #006666;
+	opacity: 0.5;
+	border-radius: 50px;
+	border:none;
+	outline: none;
+	font-size: 16px;
+	margin: 0;
+	padding: 10px;
+	color: white;
+	cursor: pointer;
+}
+.slider_btn:hover{
+	box-shadow: 0px 9px 5px 0px rgba(0,0,0,0.2), 0px 8px 8px 0px rgba(0,0,0,0.5);
+	background-color: inherit;
+	color: black;
+	opacity: 1;
+}
+.circle_container{
+	position: absolute;
+	height: auto;
+	z-index: 2;
+	width: 100%;
+	text-align: center;
+	margin-top: 50%;
+	padding: 5px;
+}
+.circle{
+	border-radius: 50%;
+	background-color: inherit;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	outline: none;	
+}
+.current_dot{
+	background-color: #009988;
+}
+.circle_animation{
+	animation-name: circle_spread;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+}
+@keyframes circle_spread{
+	0%{
+		margin-left: 30px;
+	}
+	25%{
+		margin-right: : 25px;
+	}
+	50%{
+		margin-left: 20px;
+	}
+	75%{
+		margin-right: 15px;
+	}
+	100%{
+		margin-left: 5px;
+	}
+}
+
+/* footer section */
+.footer{
+	clear: both;
+	position: relative;
+	top: 50%;
+	height: 70px;
+	background-color: #005555;
+	box-sizing: border-box;
+	width: 100%;
+	color: white;
+}
+.footer_content{
+	margin: auto;
+	box-sizing: border-box;
+	padding: 20px;
+	text-align: center;
+}
+/* projects section */
+.projects_container{
+	clear: both;
+	position: relative;
+	top: 50%;
+	height: 400px;
+	box-sizing: border-box;
+	z-index: -1;
+}
+.projects_content{
+	margin: auto;
+	box-sizing: border-box;
+}
+/* students section */
+.students_container{
+	clear: both;
+	position: relative;
+	top: 50%;
+	height: 400px;
+	box-sizing: border-box;
+	z-index: -1;
+}
+.students_content{
+	margin: auto;
+	box-sizing: border-box;
+}
+/* reviews section */
+.reviews_container{
+	clear: both;
+	position: relative;
+	top: 50%;
+	height: 400px;
+	box-sizing: border-box;
+	z-index: -1;
+}
+.reviews_content{
+	margin: auto;
+	box-sizing: border-box;
+}
+/* contact us section */
+.contact_container{
+	clear: both;
+	position: relative;
+	top: 50%;
+	height: 400px;
+	box-sizing: border-box;
+	z-index: -1;
+	background-color: #ff6666;
+}
+.contact_us{
+	margin: auto;
+	box-sizing: border-box;
+}
+.address{
+	width: 40%;
+	float: left;
+	margin-top: 30px;
+}
+
+.address pre{
+	line-height: 2em;
+	color: #005555;
+	font-weight: bolder;
+}
+.contact{
+	width: 60%;
+	float: left;
+	margin-top: 30px;
+}
+.contact h3{
+	color: white;
+}
+.contact input, .contact textarea{
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+}
+.contact textarea{
+	resize: none;
+	height: 100px;
+}
+.contact button{
+	width: 100px;
+	height: 50px;
+	border: none;
+	outline: none;
+	color: white;
+	font-weight: bolder;
+	cursor: pointer;
+	box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.4);
+	float: right;
+	background-color: #005555;
+
+}
+/* css code for About us section */
+.about_container{
+	position: relative;
+	z-index: -1;
+	top: 50%;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding-top: 0px;
+	box-sizing: border-box;
+}
+.about_content{
+	box-sizing: border-box;
+	margin: auto;
+	padding: 20px;
+	height: auto;
+	line-height: 2em;
+}
+.about{
+	text-align: center;
+}
+.about_content p{
+	text-align: justify;
+	font-size: 18px;
+	color: #000022;
+	line-height: 2em;
+}
+.about_content h2{
+	margin-bottom: 20px;
+	background-color: #ff6666;
+	padding: 10px;
+	color: white;
+	box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.5);
+}
+.button{
+	padding: 15px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #006666;
+	animation-name:button_move;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+}
+
+@keyframes button_move{
+	0%{
+		margin-left: 25%; 
+	}
+	100%{
+		margin-left: 50%;
+	}
+}
+/* css code for Our modules section */
+.modules_container{
+	position: relative;
+	top: 50%;
+	height: auto;
+	box-sizing: border-box;
+	z-index: -1;
+}
+.modules_content{
+	margin: auto;
+	box-sizing: border-box;
+}
+.module_container{
+	width:100%;
+	color: white;
+	float:left;
+	margin-top: 25px;
+	text-align: center;
+}
+.module{
+	margin-left: 25%;
+	font-size: 22px;
+	width: 150px;
+	height: 50px;
+	display: block;
+	border:none;
+	background: white;
+	padding: 20px;
+	color: teal;
+	font-weight: bold;
+	font-family: Bradley Hand ITC;
+}
+.modules{
+	color: #ff6666;
+}
+.module:nth-child(2){
+	padding: 10px;
+	background-color: #116666;
+	color: white;
+	font-size: 22px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.24), 0px 8px 16px 0px rgba(0,0,0,0.3);
+
+}
+.module_container p{
+	color: black;
+	margin-top: 20px;
+}
+/* CSS code for our tutors section */
+.tutors_container{
+	clear: both;
+	position: relative;
+	top: 50%;
+	height: auto;
+	box-sizing: border-box;
+	z-index: -1;
+}
+.tutors_content{
+	margin: auto;
+	box-sizing: border-box;
+}
+.tutor_container{
+	width:100%;
+	float:left;
+	margin: 45px 0 40px 0;
+	text-align: center;
+}
+.tutor_img{
+	opacity: 0.7;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin-bottom: 30px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2),0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.tutor_container p{
+	margin-bottom: 10px;
+	color: #006666;
+}
+.tutor_container p:nth-child(2){
+	background-color: teal;
+	color: white;
+	width: 150px;
+	margin-left: 25%;
+	font-size: 18px;
+	padding: 10px;
+}
+.tutor_container p:nth-child(3){
+	background-color: #ff6666;
+	color: white;
+	width: 150px;
+	margin-left: 25%;
+	font-size: 18px;
+	padding: 10px;
+}
+
+/* CSS code for our pricing section */
+.pricing_container{
+	clear: both;
+	position: relative;
+	top: 50%;
+	height: auto;
+	box-sizing: border-box;
+	z-index: -1;
+}
+.pricing_content{
+	margin: auto;
+	box-sizing: border-box;
+}
+.price_container{
+	width:100%;
+	float:left;
+	margin: 45px 0px 40px 0px;
+	text-align: center;
+	background-color: #ff6666;
+	border: 2px solid #ff6666;
+	box-sizing: border-box;
+	transition: 2s;
+}
+.price_container:hover{
+	box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.3),0px 8px 15px 0px rgba(0,0,0,0.3);
+}
+.module_name{
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	padding: 20px;
+	height: 100px;
+}
+.module_package{
+	background-color: white;
+	padding: 20px 10px 20px;
+	line-height: 4em;
+	height: 200px;
+	color: grey;
+	border-bottom: 3px ridge grey;
+}
+.price{
+	background-color: white;
+	padding: 30px;
+	height: 200px;
+	color: grey;
+}
+.price button{
+	margin: 50px auto;
+	animation-name:none;
+	display: block;
+	border-radius: 50%;
+	background-color: #006666;
+	color: white;
+	border:none;
+	outline: none;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 20px;
+	cursor: pointer;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2),0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/*For tablets */
+@media only screen and (max-width: 767px) and (min-width: 400px){
+	.about_container{
+		top: 70%;
+	}
+	.contact_container{
+		top: 100%;
+	}
+	.projects_container{
+		top: 100%;
+	}
+	.students_container{
+		top: 100%;
+	}
+	.reviews_container{
+		top: 100%;
+	}
+	.footer{
+		top: 100%;
+	}
+	.modules_container{
+		top:90%;
+	}
+	.module_container{
+		width: 50%;
+	}
+	.tutors_container{
+		top: 100%;
+	}
+	.tutor_container{
+		width: 50%;
+	}
+	.pricing_container{
+		top:100%;
+	}
+	.price_container{
+		width: 100%;
+	}
+	.ruby{
+		clear: both;
+	}
+}
+/*For desktop */
+@media only screen and (min-width: 820px){
+	.nav{
+		float: right;
+		display: block;
+		margin-top: 0px;
+	}
+	.nav li{
+		float: left;
+	}
+	#drop{
+		display: none;
+	}
+	#dropdown_content{
+		position: absolute;
+	}
+	#dropdown_content a{
+		display: block;
+		width: 150px;
+	}
+	#dropdown:hover #dropdown_content{
+		display: block;
+	}
+	.header{
+		opacity: 1;
+	}
+	.about_container{
+		top: 130%;
+	}
+	.modules_container{
+		top: 150%;
+	}
+	.tutors_container{
+		top: 160%;
+	}
+	.module_container{
+		width: 25%;
+	}
+	.tutor_container{
+		width: 25%;
+	}
+	.pricing_container{
+		top:150%;
+	}
+	.contact_container{
+		top: 150%;
+	}
+	.projects_container{
+		top: 150%;
+	}
+	.students_container{
+		top: 150%;
+	}
+	.reviews_container{
+		top: 150%;
+	}
+	.footer{
+		top: 150%;
+	}
+	.price_container{
+		width: 30%;
+		margin: 45px 0px 40px 25px;
+	}
+}
+@media only screen and (max-width: 819px) and (min-width: 768px){
+	.nav{
+		float: right;
+		display: block;
+		margin-top: 0px;
+	}
+	.nav li{
+		float: left;
+	}
+	#drop{
+		display: none;
+	}
+	#dropdown_content{
+		position: absolute;
+	}
+	#dropdown_content a{
+		display: block;
+		width: 150px;
+	}
+	#dropdown:hover #dropdown_content{
+		display: block;
+	}
+	.header{
+		opacity: 1;
+	}
+	.about_container{
+		top: 80%;
+	}
+	.modules_container{
+		top: 135%;
+	}
+	.tutors_container{
+		top: 140%;
+	}
+	.module_container{
+		width: 25%;
+	}
+	.tutor_container{
+		width: 25%;
+	}
+	.pricing_container{
+		top:140%;
+	}
+	.contact_container{
+		top: 140%;
+	}
+	.projects_container{
+		top: 150%;
+	}
+	.students_container{
+		top: 150%;
+	}
+	.reviews_container{
+		top: 150%;
+	}
+	.footer{
+		top: 150%;
+	}
+	.price_container{
+		width: 30%;
+		margin: 45px 0px 40px 25px;
+	}
+}
